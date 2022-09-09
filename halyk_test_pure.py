@@ -21,7 +21,7 @@ def populate():
         else:
             data[date] = {desc : [float(wd.replace(",",""))]}
 
-    output_list = sorted(calculate_by_desc(data) + calculate_daily(data))
+    output_list = calculate_by_desc(data) + calculate_daily(data)
     write_output(output_list)
     print(time.time()-start_time)
 
